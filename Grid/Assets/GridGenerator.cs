@@ -17,7 +17,7 @@ public class GridGenerator : MonoBehaviour
 
 
 
-    private void Start()//
+    private void Start()
     {
         CreateLines();
 
@@ -38,7 +38,7 @@ public class GridGenerator : MonoBehaviour
         {
             x += 1.0f;
             
-            Debug.DrawLine(new Vector3(x, 0.3f, 11.9f), new Vector3(x, 0.3f, 21.8f), Color.red, Mathf.Infinity); // Math.infinity = время отображения
+            Debug.DrawLine(new Vector3(x, 0.2f, 11.9f), new Vector3(x, 0.2f, 21.8f), Color.red, Mathf.Infinity); // Math.infinity = время отображения
         }
         
         // Horizontal

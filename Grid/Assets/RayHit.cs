@@ -7,7 +7,7 @@ public class RayHit : MonoBehaviour
 { 
     //Put this script on camera
 
-    public float rayLength;
+  //  public float rayLength;
     public LayerMask layerMask;
 
 
@@ -15,21 +15,21 @@ public class RayHit : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject( ))
         {
-            RaycastHit hit; // куда записывается инфа в случае попадания
+            RaycastHit hit; // stores if hit info
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            // It's important to change Camera Tag to: MAIN CAMERA
 
-            if (Physics.Raycast(ray, out hit, rayLength, layerMask))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
-                Debug.Log(hit.collider.name);
-
-
-
-
-
-                //if (hit.collider != null)
-                //{
-                 //   Debug.Log("HIT");
-                //}
+                //Debug.Log(hit.collider.name);
+             
+                if (hit.collider != null)
+                {
+                    Vector3 w = hit.point;
+                    Debug.Log("HIT");
+                    Debug.Log("X = " + w.x);
+                    Debug.Log("Z = " + w.z);
+                }
             }
         }
 
