@@ -31,19 +31,20 @@ public class GridGenerator : MonoBehaviour
     public void CreateLines()
     {
         //Vertical
-        //start 0/7/22
-        //end 0/7/13
+        //start x/0.2f/11.9f
+        //end x/0.2f/21.8f
         
         for (int i = 0; i < 11; i++)
         {
             x += 1.0f;
             
-            Debug.DrawLine(new Vector3(x, 0.2f, 11.9f), new Vector3(x, 0.2f, 21.8f), Color.red, Mathf.Infinity); // Math.infinity = время отображения
+            Debug.DrawLine(new Vector3(x, 0.2f, 11.9f), new Vector3(x, 0.2f, 21.8f), Color.red, Mathf.Infinity); 
+            // Math.infinity = время отображения
         }
         
         // Horizontal
-        //x 0-10
-        // z 12-22
+        //-0.5f, 0.2f, z
+        //9.5f, 0.2f, z
         
         for (int j = 0; j < 11; j++)
         {
