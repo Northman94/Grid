@@ -1,19 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class BlockInteraction : MonoBehaviour 
+public class BlockInteraction : MonoBehaviour
 {
     bool isEmpty = true;
 
-	// Use this for initialization
-	void Start () 
-    {
-        
-	}
+   
 
-
-
+    #region Change Color if mouse over
     public void OnMouseOver()
     {
         if (isEmpty)
@@ -31,5 +27,7 @@ public class BlockInteraction : MonoBehaviour
     {
         gameObject.GetComponent<Renderer>().material.color = Color.white;
     }
+#endregion 
+
 
 }
